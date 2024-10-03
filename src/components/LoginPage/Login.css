@@ -1,0 +1,133 @@
+/* General styling for the login container */
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://cdn.prod.website-files.com/5c0a715b09ba6f668d586b2e/6492d59486b451f411ca8b8c_Lumi_hero_image-p-1080.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+}
+
+/* Styling for the login form container */
+.login-form-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Form header */
+.login-form-container h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Password group for positioning the eye icon */
+.password-group {
+  position: relative;
+}
+
+/* Styling for the password container */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the eye icon */
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6c757d;
+}
+
+/* Add padding to avoid overlap between text and icon */
+.form-control {
+  padding-right: 2.5rem;
+}
+
+/* Submit button styling */
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.submit-button:disabled {
+  background-color: #6c757d;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Link to redirect to the registration page */
+.redirect-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Loading animation */
+@keyframes loadingDots {
+  0% {
+    content: 'Loading';
+  }
+  33% {
+    content: 'Loading.';
+  }
+  66% {
+    content: 'Loading..';
+  }
+  100% {
+    content: 'Loading...';
+  }
+}
+
+.loading-text::after {
+  content: 'Loading';
+  animation: loadingDots 1.5s steps(3, end) infinite;
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .login-form-container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .submit-button {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+

@@ -1,0 +1,131 @@
+/* General styling */
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('https://cdn.prod.website-files.com/5c0a715b09ba6f668d586b2e/622cf05bf85ef6c4eae2f890_Muse_Ikonospace-p-1080.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  z-index: 1; /* Ensure the register form container is beneath the toast notifications */
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9); /* White with some transparency */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  z-index: 2; /* Lower z-index so toast notifications can appear on top */
+  position: relative; /* Ensures it doesn't interfere with the toast notifications */
+}
+
+  
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group span {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.875rem;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Custom Toastify Styles */
+.Toastify__toast {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; /* Prevent text wrapping */
+  text-overflow: ellipsis; /* Show ellipsis for overflow text */
+  overflow: hidden; /* Hide overflowing text */
+  max-width: 300px; /* Set a maximum width */
+
+}
+
+.Toastify__toast--success {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.Toastify__toast--error {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.Toastify__toast--warning {
+  background-color: #ff9800; /* Orange */
+  color: white;
+}
+
+.Toastify__toast--info {
+  background-color: #2196f3; /* Blue */
+  color: white;
+}
+
+.Toastify__close-button {
+  color: white;
+}
+
+.Toastify__progress-bar {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .login-form-container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .submit-button {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+}
